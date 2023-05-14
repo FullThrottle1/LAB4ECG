@@ -54,7 +54,7 @@ struct BaseLight                                                                
                                                                                     \n\
 struct DirectionalLight                                                             \n\
 {                                                                                   \n\
-    struct BaseLight Base;                                                          \n\
+    BaseLight Base;                                                          \n\
     vec3 Direction;                                                                 \n\
 };                                                                                  \n\
                                                                                     \n\
@@ -67,14 +67,14 @@ struct Attenuation                                                              
                                                                                     \n\
 struct PointLight                                                                           \n\
 {                                                                                           \n\
-    struct BaseLight Base;                                                                  \n\
+    BaseLight Base;                                                                  \n\
     vec3 Position;                                                                          \n\
     Attenuation Atten;                                                                      \n\
 };                                                                                          \n\
                                                                                             \n\
 struct SpotLight                                                                            \n\
 {                                                                                           \n\
-    struct PointLight Base;                                                                 \n\
+    PointLight Base;                                                                 \n\
     vec3 Direction;                                                                         \n\
     float Cutoff;                                                                           \n\
 };                                                                                          \n\
